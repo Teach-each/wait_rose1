@@ -4,5 +4,6 @@
   "Not_entering_email": "Please enter your email address",
   "Not_enetering_Password": "Please enter your password",
   "Enter_valid_email": "Please enter a valid email address",
-  "valid_email_and_password":""
+  "valid_email_and_password":"User credentials are right"
 }
+

@@ -10,7 +10,8 @@ import io.cucumber.junit.CucumberOptions;
 
 @CucumberOptions(
 		features="src/test/resources/Feature",
-		glue="com.wait.rose_step_defenition",
+		glue={"com.wait.rose_step_defenition",
+				"com.wait.rose_HooksClass"},
 				tags= "@WR1",
 		plugin = {
 				"pretty",

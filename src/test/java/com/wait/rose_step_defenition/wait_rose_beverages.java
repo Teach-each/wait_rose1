@@ -40,19 +40,23 @@ public void i_launch_the_browser(String key) throws IOException {
 	public void user_enters_the_and_and_click_on_signin_and_validate_from_file(String username, String password, String err, String file) throws IOException, ParseException, InterruptedException {
 		ref = new wait_rose_beverages_POM();
 		ref.enter_login_Details_And_validate(username, password, err, file);
-		Allure.step("User name and password are entered ");
+	
 	}
 
-	@Then("user validates the login dashboard Page title {string}")
-	public void user_validates_the_login_dashboard_page_title(String string) {
-	    String title = Hooks.driver.getTitle();
-	    System.out.println(title);
-	    assertEquals(title, "ABC");
-	}
+//	@Then("user validates the login dashboard Page title {string}")
+//	public void user_validates_the_login_dashboard_page_title(String string) {
+//	    String title = Hooks.driver.getTitle();
+//	    System.out.println(title);
+//	    assertEquals(title, "ABC");
+//	}
 
 	
 
-
+	@Then("user validates the dashboard {string} along with the information for {string}")
+	public void user_validates_the_dashboard_along_with_the_information_for(String data1, String data2) {
+		ref.validate_Dashboard(data1, data2);
+	   
+	}
 	
 
 

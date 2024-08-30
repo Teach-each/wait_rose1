@@ -1,6 +1,9 @@
 package com.Page.Object.Model;
 
 
+import static org.junit.Assert.assertEquals;
+import static org.testng.Assert.assertEquals;
+
 import java.io.IOException;
 
 import org.json.simple.parser.ParseException;
@@ -14,6 +17,8 @@ import org.openqa.selenium.support.PageFactory;
 import com.Helper.utilities.Helper;
 import com.wait.rose.Base.base;
 import com.wait.rose_HooksClass.Hooks;
+
+import io.qameta.allure.Allure;
 
 public class wait_rose_beverages_POM extends base {
 	
@@ -189,7 +194,7 @@ public class wait_rose_beverages_POM extends base {
 			enter_email(username);
 			enter_Password(password);
 			click_login_Btn();
-			System.out.println(driver.getTitle());
+			Allure.step(key_value_Error_message);
 			break;
 			
 			
@@ -204,6 +209,11 @@ public class wait_rose_beverages_POM extends base {
 	
 		
 		
+	}
+	
+	public void validate_Dashboard(String s1, String s2) {
+		assertEquals(driver.getTitle(), s1);
+		Allure.step(s2);
 	}
 
 
